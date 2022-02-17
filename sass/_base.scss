@@ -1,0 +1,62 @@
+/*
+COLORS
+$Primary:#eb2f64;
+$Primary_light: #FF3366;
+$Primary_dark: #BA265D;
+
+$Grey_light_1: #faf9f9;
+$Grey_light_2: #f4f2f2;
+$Grey_light_3: #f0eeee;
+$Grey_light_4: #ccc;
+
+$Grey_dark_1: #333;
+$Grey_dark_2: #777;
+$Grey_dark_3: #999;
+*/
+
+:root{
+    --color-primary:#eb2f64;
+    --color-primary-light:#FF3366;
+    --color-primary-dark:#BA265D;
+
+    --color-grey-light-1:#faf9f9;
+    --color-grey-light-2:#f4f2f2;
+    --color-grey-light-3:#f0eeee;
+    --color-grey-light-4:#ccc;
+
+    --color-grey-dark-1:#333;
+    --color-grey-dark-2:#777;
+    --color-grey-dark-3:#999;
+}
+
+$device-big-screen:75em; //1200px/16px = 75em
+$device-medium-screen: 68.75em; //1100px/16px = 68.75em
+$device-small-screen: 56.25em ; //900px/16px = 56.25em
+$device-smallest-screen:31.25em; //500px/16px = 31.25em
+*{
+    margin: 0;
+    padding: 0;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    @media only screen and (max-width: $device-medium-screen) {
+        font-size: 50%; //1rem:8px 8px/16px = 50%
+    }
+    @media only screen and (max-width: $device-small-screen) {
+        font-size: 37.5%; //1rem:6px 6px/16px = 37.5%
+    }
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right , var(--color-primary-light),var(--color-primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
